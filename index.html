@@ -6,6 +6,113 @@
     <title>Happy na BDAY MO pa</title>
     <link rel="icon" type="image/png" sizes="32x32" href="download.jpg">
     <link rel="apple-touch-icon" href="download.jpg">
+
+    <style>
+        :root {
+            --ao3-blue: #2f5b91;
+            --ao3-light-blue: #e2eaf2;
+            --ao3-bg: #f4f4f4;
+            --ao3-text: #2a2a2a;
+            --ao3-dark-red: #900;
+            --ao3-serif: Georgia, "Nimbus Roman No9 L", serif;
+            --ao3-sans: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--ao3-light-blue);
+            color: var(--ao3-text);
+            font-family: var(--ao3-sans);
+            line-height: 1.5;
+        }
+
+        #landing-page {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: var(--ao3-blue);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        #landing-page h2 { font-family: var(--ao3-serif); font-size: 2rem; margin-bottom: 10px; font-weight: normal; }
+        
+        .enter-btn {
+            background: #eee;
+            background-image: linear-gradient(#fff, #bbb);
+            color: #444;
+            border: 1px solid #ccc;
+            padding: 12px 24px;
+            font-family: var(--ao3-sans);
+            font-weight: bold;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        #main-content {
+            display: none; 
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            margin: 0 auto;
+            min-height: 100vh;
+            border: 1px solid #ccc;
+        }
+
+        .work-header { background: var(--ao3-bg); padding: 15px; font-size: 0.85rem; border-bottom: 1px solid #ccc; }
+        .meta-group { border-bottom: 1px dotted #ccc; padding: 4px 0; }
+        .meta-label { font-weight: bold; }
+
+        .work-title {
+            color: var(--ao3-dark-red);
+            font-family: var(--ao3-serif);
+            font-size: 1.8rem;
+            padding: 20px 20px 0 20px;
+            font-weight: normal;
+        }
+
+        .author-name { color: var(--ao3-blue); padding: 0 20px 20px 20px; font-weight: bold; }
+
+        .letter-body {
+            padding: 30px 20px;
+            font-family: var(--ao3-serif);
+            font-size: 1.15rem;
+            line-height: 1.7;
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+        }
+
+        .letter-body p { margin-bottom: 1.5em; }
+
+        .spotify-container { padding: 0 20px 20px 20px; }
+
+        .kudos-section { padding: 40px 20px; text-align: center; border-top: 1px solid #ccc; }
+        .kudos-button {
+            background: #eee;
+            background-image: linear-gradient(#fff, #bbb);
+            color: var(--ao3-dark-red);
+            border: 1px solid #ccc;
+            padding: 8px 16px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        #kudos-msg { display: none; color: var(--ao3-blue); margin-top: 15px; font-weight: bold; }
+
+        @media (max-width: 600px) {
+            #main-content { border: none; }
+            .letter-body { font-size: 1.1rem; padding: 20px; }
+        }
+    </style>
+    
 </head>
 <body>
 
