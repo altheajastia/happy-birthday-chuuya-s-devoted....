@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work: Happy Birthday | Archive of Our Own</title>
+    <style>
+        :root {
+            --ao3-blue: #2f5b91;
+            --ao3-light-blue: #e2eaf2;
+            --ao3-bg: #f4f4f4;
+            --ao3-text: #2a2a2a;
+            --ao3-dark-red: #900;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--ao3-light-blue);
+            color: var(--ao3-text);
+            font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        #landing-page {
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+            height: 100%;
+            background: var(--ao3-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .enter-btn {
+            background: white;
+            color: var(--ao3-blue);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .main-wrapper {
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            margin: 20px 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: none; 
+        }
+
+        .work-header {
+            background-color: var(--ao3-bg);
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+            font-size: 0.85rem;
+        }
+
+        .meta-group { margin-bottom: 6px; border-bottom: 1px dotted #ccc; padding-bottom: 4px; }
+        .meta-label { font-weight: bold; color: #444; }
+        
+        .work-title {
+            color: var(--ao3-dark-red);
+            font-family: Georgia, serif;
+            font-size: 1.7rem;
+            margin: 20px 15px 5px 15px;
+        }
+
+        .author-name {
+            margin: 0 15px 20px 15px;
+            font-size: 1rem;
+            color: var(--ao3-blue);
+        }
+
+        .spotify-container {
+            padding: 0 15px 20px 15px;
+        }
+
+        .letter-body {
+            padding: 25px 15px;
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            white-space: pre-line; 
+        }
+
+        .kudos-section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .kudos-button {
+            background: transparent;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            color: var(--ao3-dark-red);
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        #kudos-msg {
+            display: none;
+            color: var(--ao3-blue);
+            font-size: 0.9rem;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            .main-wrapper { margin: 0; border: none; }
+            .work-title { font-size: 1.4rem; }
+            .letter-body { font-size: 1.05rem; padding: 20px 15px; }
+            .meta-group { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="landing-page">
+        <h2 style="font-family: Georgia, serif;">Archive of Our Own</h2>
+        <p>You have been gifted a new work.</p>
+        <button class="enter-btn" onclick="startExperience()">Proceed to Letter</button>
+    </div>
+
+    <div id="main-content" class="main-wrapper">
+        <div class="work-header">
+            <div class="meta-group"><span class="meta-label">Rating:</span> General Audiences</div>
+            <div class="meta-group"><span class="meta-label">Archive Warning:</span> Heavy Crying from the Wholesomeness</div>
+            <div class="meta-group"><span class="meta-label">Category:</span> Gen / F&F</div>
+            <div class="meta-group"><span class="meta-label">Fandom:</span> Brotato Chip with a Side of Pickle Dip</div>
+            <div class="meta-group"><span class="meta-label">Relationship:</span> Kirsten & Thea</div>
+            <div class="meta-group"><span class="meta-label">Characters:</span> Kirsten </div>
+            <div class="meta-group"><span class="meta-label">Additional Tags:</span> Birthday Fic, Found Family, Emotional, One-Shot, Very Blue Palette</div>
+        </div>
+
+        <h1 class="work-title">Chapter 1: The Birthday Letter</h1>
+        <div class="author-name">by <strong>Thea Tortilla</strong></div>
+
+        <div class="spotify-container">
+            <iframe style="border-radius:12px" 
+                src="https://open.spotify.com/playlist/5DTiW4x4p0TTct6SW7qJi8?si=9d07cffb79964686" 
+                width="100%" height="152" 
+                frameBorder="0" allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="letter-body">
+            Dear Kirsten,
+
+            (Paste your letter here! I've set this up so you can just type or paste. 
+            The code will keep your paragraphs separated perfectly.)
+
+            I hope you have the best birthday ever!
+
+            Love,
+            Thea
+        </div>
+
+        <div class="kudos-section">
+            <button class="kudos-button" onclick="leaveKudos()">❤️ Leave Kudos</button>
+            <p id="kudos-msg">
+                <strong>Kirsten</strong> left kudos on this work!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function startExperience() {
+            document.getElementById('landing-page').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        function leaveKudos() {
+            const msg = document.getElementById('kudos-msg');
+            msg.style.display = 'block';
+            alert("Kudos received! Happy Birthday! ❤️");
+        }
+    </script>
+</body>
+</html>
