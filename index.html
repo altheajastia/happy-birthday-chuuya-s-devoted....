@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work: Happy Birthday | Archive of Our Own</title>
+    <title>Happy na BDAY MO pa</title>
     <style>
         :root {
             --ao3-blue: #2f5b91;
@@ -11,6 +11,8 @@
             --ao3-bg: #f4f4f4;
             --ao3-text: #2a2a2a;
             --ao3-dark-red: #900;
+            --ao3-serif: Georgia, "Nimbus Roman No9 L", "Songti SC", serif;
+            --ao3-sans: "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
         }
 
         * { box-sizing: border-box; }
@@ -18,7 +20,6 @@
         body {
             background-color: var(--ao3-light-blue);
             color: var(--ao3-text);
-            font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Verdana', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -40,102 +41,102 @@
             padding: 20px;
         }
 
+        #landing-page h2 {
+            font-family: var(--ao3-serif);
+            font-weight: normal;
+            font-size: 2.2rem;
+        }
+
+        #landing-page p {
+            font-family: var(--ao3-sans);
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
         .enter-btn {
-            background: white;
-            color: var(--ao3-blue);
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1rem;
+            background: #eee;
+            background-image: linear-gradient(#fff, #bbb);
+            color: #444;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            font-family: var(--ao3-sans);
+            font-size: 1rem;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            margin-top: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
         .main-wrapper {
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             background-color: white;
             margin: 20px 10px;
             border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            display: none; 
+            display: none;
         }
 
         .work-header {
             background-color: var(--ao3-bg);
             padding: 15px;
             border-bottom: 1px solid #ccc;
+            font-family: var(--ao3-sans);
             font-size: 0.85rem;
         }
 
         .meta-group { margin-bottom: 6px; border-bottom: 1px dotted #ccc; padding-bottom: 4px; }
-        .meta-label { font-weight: bold; color: #444; }
+        .meta-label { font-weight: bold; }
         
         .work-title {
             color: var(--ao3-dark-red);
-            font-family: Georgia, serif;
-            font-size: 1.7rem;
-            margin: 20px 15px 5px 15px;
+            font-family: var(--ao3-serif);
+            font-weight: normal;
+            font-size: 1.8rem;
+            margin: 25px 20px 5px 20px;
         }
 
         .author-name {
-            margin: 0 15px 20px 15px;
-            font-size: 1rem;
+            margin: 0 20px 25px 20px;
+            font-size: 1.1rem;
+            font-family: var(--ao3-sans);
             color: var(--ao3-blue);
-        }
-
-        .spotify-container {
-            padding: 0 15px 20px 15px;
+            font-weight: bold;
         }
 
         .letter-body {
-            padding: 25px 15px;
-            font-family: Georgia, serif;
-            line-height: 1.8;
-            font-size: 1.1rem;
+            padding: 30px 20px;
+            font-family: var(--ao3-serif);
+            line-height: 1.5;
+            font-size: 1.25rem;
             border-top: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
-            white-space: pre-line; 
+            white-space: pre-line;
         }
 
-        .kudos-section {
-            padding: 30px 20px;
-            text-align: center;
-        }
-
+        .kudos-section { padding: 40px 20px; text-align: center; font-family: var(--ao3-sans); }
         .kudos-button {
-            background: transparent;
+            background: #eee;
+            background-image: linear-gradient(#fff, #bbb);
             border: 1px solid #ccc;
-            padding: 10px 20px;
+            padding: 5px 15px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 4px;
             color: var(--ao3-dark-red);
             font-weight: bold;
-            font-size: 1rem;
         }
 
-        #kudos-msg {
-            display: none;
-            color: var(--ao3-blue);
-            font-size: 0.9rem;
-            margin-top: 15px;
-            font-style: italic;
-        }
+        #kudos-msg { display: none; color: var(--ao3-blue); margin-top: 15px; font-weight: bold; font-size: 0.9rem; }
 
         @media (max-width: 600px) {
             .main-wrapper { margin: 0; border: none; }
-            .work-title { font-size: 1.4rem; }
-            .letter-body { font-size: 1.05rem; padding: 20px 15px; }
-            .meta-group { font-size: 0.8rem; }
+            .letter-body { font-size: 1.15rem; }
         }
     </style>
 </head>
 <body>
 
     <div id="landing-page">
-        <h2 style="font-family: Georgia, serif;">Archive of Our Own</h2>
+        <h2>Archive of Our Own</h2>
         <p>You have been gifted a new work.</p>
         <button class="enter-btn" onclick="startExperience()">Proceed to Letter</button>
     </div>
@@ -143,33 +144,52 @@
     <div id="main-content" class="main-wrapper">
         <div class="work-header">
             <div class="meta-group"><span class="meta-label">Rating:</span> General Audiences</div>
-            <div class="meta-group"><span class="meta-label">Archive Warning:</span> Heavy Crying from the Wholesomeness</div>
+            <div class="meta-group"><span class="meta-label">Archive Warning:</span> Heavy Crying Due to Wholesomeness</div>
             <div class="meta-group"><span class="meta-label">Category:</span> Gen / F&F</div>
             <div class="meta-group"><span class="meta-label">Fandom:</span> Brotato Chip with a Side of Pickle Dip</div>
             <div class="meta-group"><span class="meta-label">Relationship:</span> Kirsten & Thea</div>
-            <div class="meta-group"><span class="meta-label">Characters:</span> Kirsten </div>
-            <div class="meta-group"><span class="meta-label">Additional Tags:</span> Birthday Fic, Found Family, Emotional, One-Shot, Very Blue Palette</div>
+            <div class="meta-group"><span class="meta-label">Additional Tags:</span> Birthday Fic, Emotional, One-Shot, Everything (KINDA) is Blue,
+            Heh *chuckles*, Found Family, </div>
         </div>
 
-        <h1 class="work-title">Chapter 1: The Birthday Letter</h1>
-        <div class="author-name">by <strong>Thea Tortilla</strong></div>
+        <h1 class="work-title">THE Birthday Letter</h1>
+        <div class="author-name">THE GOAT Thea</div>
 
-        <div class="spotify-container">
-            <iframe style="border-radius:12px" 
-                src="https://open.spotify.com/playlist/5DTiW4x4p0TTct6SW7qJi8?si=9d07cffb79964686" 
-                width="100%" height="152" 
-                frameBorder="0" allowfullscreen="" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">
-            </iframe>
+        <div class="spotify-container" style="padding: 0 20px 20px 20px;">
+            <iframe style="border-radius:12px" src="<iframe data-testid="embed-iframe" style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/5DTiW4x4p0TTct6SW7qJi8?utm_source=generator" width="100%" height="352" frameBorder="0" 
+                allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"></iframe>" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
+            fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
         <div class="letter-body">
             Dear Kirsten,
 
-            (Paste your letter here! I've set this up so you can just type or paste. 
-            The code will keep your paragraphs separated perfectly.)
+            como estas amiga its sherbetday
+            
+            A decade long friendship is crazyyyyyyy but I'm glad it's with you because 
+            duh we're like two peas in a pod... almost every reference you catch it like:
 
+            <div class="user-image">
+                <img src="https://preview.redd.it/why-does-this-sub-like-this-bald-eagle-so-much-i-mean-its-v0-8n6vz0f6156d1.jpeg?
+                    width=603&format=pjpg&auto=webp&s=bfd1095901e431a0428f97bbd67b6265def4fa51" alt="holy ref">
+                    </div>
+
+            You're like the only person I ever to talk to about my problems... and also the only person
+            I play 2 player tycoons with lawl. 
+
+            In all seriousness, I cannot put into words how grateful I am to have you as my friend. You've been one of my rocks in times where
+            I felt like I was lacking behind in everything, and that's something I am deeply appreciative of. Thank you for all the years we've had been
+            buddies, I hope this spark of ours never dulls kahit na nasa Japan ako at nakakulong dahil nalaman nilang nagssmuggle ako ng yaoi pauwing Pinas...
+            I'll never get tired of you Kirsten, kahit na you have self-deprecating moments... remember that we've been with you for GOD knows how long and 
+            have never left your side. Sure there was a time na our gc was hella dry, but we're sOOOOO tuff that as soon as that went alive again we
+            immediately went to yapping for ages. Never belittle yourself so much bro, sure sometimes you have moments that are like 'alright so uhm..'
+            but that shouldn't dictate how you view yourself as a whole (UNDERSTANDING THE SELF WOOOO). Love you so much Kirsten, Happiest 19th Birthday Twin.
+            
+            I wanted to make you a handwritten letter but I was 3 papers deep and couldn't really relay what I wanted to say without ruining the paper and
+            a lightbulb went off like the are you are you meme, then I was like hey I'm an IT major... SO I HOPE THIS IS GOATED ENOUGH <33333333
+            
             I hope you have the best birthday ever!
 
             Love,
@@ -178,9 +198,7 @@
 
         <div class="kudos-section">
             <button class="kudos-button" onclick="leaveKudos()">❤️ Leave Kudos</button>
-            <p id="kudos-msg">
-                <strong>Kirsten</strong> left kudos on this work!
-            </p>
+            <p id="kudos-msg">Kirsten left kudos on this work!</p>
         </div>
     </div>
 
@@ -190,11 +208,9 @@
             document.getElementById('main-content').style.display = 'block';
             window.scrollTo(0, 0);
         }
-
         function leaveKudos() {
-            const msg = document.getElementById('kudos-msg');
-            msg.style.display = 'block';
-            alert("Kudos received! Happy Birthday! ❤️");
+            document.getElementById('kudos-msg').style.display = 'block';
+            alert("Kudos received! ❤️");
         }
     </script>
 </body>
