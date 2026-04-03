@@ -3,7 +3,7 @@
     --ao3-light-blue: #e2eaf2; 
     --ao3-bg: #f4f4f4;         
     --ao3-text: #2a2a2a;       
-    --ao3-dark-red: #900;      
+    --ao3-dark-red: #900;     
     
     --ao3-serif: Georgia, "Nimbus Roman No9 L", "Songti SC", serif;
     --ao3-sans: "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, sans-serif;
@@ -51,7 +51,6 @@ body {
     font-family: var(--ao3-sans);
     font-size: 1rem;
     margin-bottom: 30px;
-    opacity: 0.9;
 }
 
 .enter-btn {
@@ -93,7 +92,6 @@ body {
 
 .meta-label { 
     font-weight: bold; 
-    color: #333;
 }
 
 .work-title {
@@ -101,11 +99,11 @@ body {
     font-family: var(--ao3-serif);
     font-weight: normal;
     font-size: 1.8rem;
-    margin: 25px 20px 5px 20px;
+    margin: 30px 20px 5px 20px;
 }
 
 .author-name {
-    margin: 0 20px 25px 20px;
+    margin: 0 20px 30px 20px;
     font-size: 1.1rem;
     font-family: var(--ao3-sans);
     color: var(--ao3-blue);
@@ -115,16 +113,24 @@ body {
 .letter-body {
     padding: 40px 30px;
     font-family: var(--ao3-serif);
-    line-height: 1.6;
+    line-height: 1.7; 
     font-size: 1.25rem;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    white-space: pre-line;
-    
+
     text-align: justify;
     text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
     hyphens: auto;
     word-break: break-word;
+    
+    white-space: normal; 
+}
+
+.letter-body p {
+    margin-bottom: 1.5em;
+    margin-top: 0;
 }
 
 .user-image {
@@ -149,12 +155,12 @@ body {
     background: #eee;
     background-image: linear-gradient(#fff, #bbb);
     border: 1px solid #ccc;
-    padding: 6px 18px;
+    padding: 8px 20px;
     cursor: pointer;
     border-radius: 4px;
     color: var(--ao3-dark-red);
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 #kudos-msg { 
@@ -170,17 +176,11 @@ body {
         margin: 0; 
         border: none; 
     }
-    
     .work-title { 
         font-size: 1.5rem; 
     }
-    
     .letter-body { 
-        font-size: 1.15rem; 
-        padding: 25px 20px; 
-    }
-    
-    .meta-group { 
-        font-size: 0.8rem; 
+        font-size: 1.1rem; 
+        padding: 30px 20px; 
     }
 }
